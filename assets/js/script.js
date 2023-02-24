@@ -26,7 +26,7 @@ function countWord(string) {
 }
 
 
-let string = "Code Academy Web Development Group P515";
+let string = "Code Academy - Web Development Group P515";
 let result = countWord(string);
 console.log(result);
 
@@ -88,48 +88,52 @@ console.log(arr.Find(x => x > 3));
 
 //=================================================================================
 
+const Arr = [1, 2, 3, 4, 5];
+const adlar = ["Lorem","Ipsum","Doler"]
+
 
 //spread
 //spread
 
-
-// const newArr = [1, 2, 3, 4, 5];
-// const adlar = ["Yusif","Farhad","Ayaz"]
-
-// const tirt = [...newArr, ...adlar]
-// console.log(tirt);
-// console.log(Math.max(...newArr));
+const newArr = [...Arr, ...adlar]
+console.log(newArr);
 
 
-// console.log(newArr);
+const Arr1="AYAZ"
+const chars=[...Arr1]
+console.log(chars);
+
+
+
+ 
 /////////////////////////////////////////////////////
 
 //rest
 //rest
 //rest
 
-// const [a,b,...ayaz]=newArr;
-// console.log(a,b,ayaz);
+const [a,b,...log]=newArr;
+console.log(a,b,log);
 
-// function foo(a,b,c,d,e){
-//     console.log(a,b,c,d,e)
-// }
-// foo("Yusif","Farhad","Ayaz",...newArr)
+function foo(a,b,c,d,e){
+    console.log(a,b,c,d,e)
+}
+foo("Lorem","Ipsum","Doler",...newArr)
 
-// const Ayaz = {
-//     name:"Ayaz",
-//     age: 32,
-//     City: "Baku"
-// }
+const Lorem = {
+    name:"Lorem",
+    age: 32,
+    City: "Baku"
+}
 
-// const Farhad = {
-//     name1:"Farhad",
-//     age1:28,
-//     City1:"Imishli"
-// }
+const Ipsum = {
+    name1:"Ipsum",
+    age1:28,
+    City1:"Baku"
+}
 
-// // console.log(Farhad);
-// // console.log(Ayaz);
+// console.log(Lorem);
+// console.log(Ipsum);
 
-// const person = {...Farhad, ...Ayaz};
-// console.log(person);
+const person = {...Lorem, ...Ipsum};
+console.log(person);
