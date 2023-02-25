@@ -144,13 +144,13 @@ foo("Lorem","Ipsum","Doler",...newArr)
 
 const Lorem = {
     name:"Lorem",
-    age: 2,
+    age: 12,
     City: "Baku"
 }
 
 const Ipsum = {
     name1:"Ipsum",
-    age1:8,
+    age1:18,
     City1:"Baku"
 }
 
