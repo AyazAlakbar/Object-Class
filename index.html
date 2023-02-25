@@ -7,7 +7,135 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!--                                                     SPREAD
+                                                             SPREAD
+                                                             SPREAD
+                                                             SPREAD
+                                                             SPREAD   
+        Spread syntax, JavaScript dilində bir operator olaraq istifadə olunur və üç nöqtə işarəsi ( ... ) ilə göstərilir. 
+
+Bu operator, bir array, obyekt və ya digər iterable bir yığını açmaq və daxilindəki elementləri ayrı-ayrı istifadə etməyimizi mümkün edir.
+
+Spread syntax, xüsusilə funksiyalara argument göndərmə və obyekt və ya array-ləri birləşdirmə əməliyyatlarında istifadə olunur.
+
+Məsələn, bir array-dəki elementləri digər bir array-ə əlavə etmək üçün spread syntax-dan istifadə edə bilərsiniz:
+
+javascript
+Copy code
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr3); // [1, 2, 3, 4, 5, 6]
+
+=======================================================================================================
+
+Həmçinin, funksiyaya birdən çox argument göndərmək üçün spread syntax-dan istifadə edə bilərsiniz:
+
+javascript
+Copy code
+function myFunction(x, y, z) {
+console.log(x + y + z);
+}
+
+const args = [1, 2, 3];
+
+myFunction(...args); // 6
+
+==========================================================================================================
+
+Spread syntax, obyektlərdə də istifadə edilə bilər:
+
+javascript
+Copy code
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+
+const obj3 = {...obj1, ...obj2};
+
+console.log(obj3); // {a: 1, b: 2, c: 3, d: 4}
+
+===========================================================================================================
+
+Bir obyektin kopyasını almaq üçün də spread syntax-dan istifadə edə bilərsiniz:
+
+javascript
+Copy code
+const obj1 = {a: 1, b: 2};
+const obj2 = {...obj1};
+
+console.log(obj2); // {a: 1, b: 2}
+
+============================================================================================================
+
+Spread syntax, iterable yapıları açdığı üçün, string-lərdə də istifadə edilə bilər:
+
+javascript
+Copy code
+const str = 'hello';
+
+const chars = [...str];
+
+console.log(chars); // ['h', 'e', 'l', 'l', 'o'] -->
+
+<!-- 
+                                                                   REST
+                                                                   REST
+                                                                   REST
+                                                                   REST
+                                                                   REST
+Rest parametrləri, JavaScript dilində funksiya parametri kimi istifadə edilən bir xüsusiyyətdir və üç nöqtə işarəsi ( ... ) ilə göstərilir. 
+
+Bu xüsusiyyət, müxtəlif sayda argümanı bir tək massivdə toplamağa imkan verir.
+
+Rest parametrləri funksiyaların elastikiyyətini artırır və dəyişən sayda argümanları qəbul etmək üçün istifadə edilir.
+
+Məsələn, aşağıdakı funksiya, rest parametrlərini istifadə edərək, funksiyaya göndərilən bütün argümanları bir massivdə toplayır:
+
+javascript
+Copy code
+function myFunction(...args) {
+console.log(args);
+}
+
+myFunction(1, 2, 3); // [1, 2, 3]
+
+============================================================================================================================================
+
+Rest parametrləri xüsusiyyəti normal funksiya parametrləri ilə birgə istifadə edilə bilər. 
+Rest parametrləri, funksiya təyinatında yalnız bir dəfə istifadə edilə bilər və əsasən son parametr olaraq təyin edilir.
+
+javascript
+Copy code
+function myFunction(x, y, ...args) {
+console.log(args);
+}
+
+myFunction(1, 2, 3, 4, 5); // [3, 4, 5]
+
+============================================================================================================================================
+
+Rest parametrləri, dəyişən sayda argümanları qəbul etmək üçün sıx istifadə olunur. 
+Həmçinin, rest parametrləri vasitəsilə bir massivin və ya obyektin elementlərini ayrı-ayrı parametrlər kimi göndərmək də mümkündür:
+
+javascript
+Copy code
+const arr = [1, 2, 3, 4, 5];
+
+function myFunction(a, b, ...args) {
+console.log(a); // 1
+console.log(b); // 2
+console.log(args); // [3, 4, 5]
+}
+
+myFunction(...arr);
+Rest parametrləri xüsusiyyəti, funksiyaların genişləndirilməsinə kömək edir və dəyişən sayda argümanları qəbul etmək üçün istifadə edilir. -->
+
+
+
+
 </body>
+
 <script src="./assets/js/script.js"></script>
 </html>

@@ -39,11 +39,12 @@ class array {
 
     constructor() {
         let arr = Object.create(array.prototype)
-        //
+        
         Object.defineProperty(arr, 'length', {
             value: 0,
             enumerable: false,
-            writable: true
+            writable: true,
+            configurable: false
         })
 
 
@@ -86,6 +87,27 @@ arr.Push(2);
 
 console.log(arr.Find(x => x > 3));
 
+
+
+
+// Bu kod, JavaScript dilinde bir array sınıfı tanımlamak için kullanılıyor. 
+//Bu sınıfın özellikleri, bir dizi öğeyi depolayabilmesi ve bu öğelere bazı işlemler yapabilmesidir.
+
+// Sınıfın constructor'ı, sınıf örneği oluşturulduğunda çalışır ve diziye argümanları ekler. 
+//İlk olarak Object.create() kullanılarak yeni bir dizi oluşturulur ve bu dizi arr değişkenine atanır. 
+//Ardından, Object.defineProperty() kullanılarak diziye bir length özelliği eklenir ve bu özellik sıfıra eşitlenir. 
+//Daha sonra, arguments objesindeki her bir argüman, arr dizisine eklenir ve dizinin uzunluğu artırılır. Son olarak, arr dizisi döndürülür.
+
+// Sınıfın Push() fonksiyonu, dizinin sonuna yeni bir öğe ekler ve dizinin uzunluğunu artırır. 
+//Find() fonksiyonu, belirli bir koşulu sağlayan ilk öğeyi döndürür.
+ //Bu koşul, fonksiyona parametre olarak verilen bir callback fonksiyonu aracılığıyla belirlenir.
+
+// Kodun son kısmında, arr adlı bir array örneği oluşturulur ve Push() fonksiyonu kullanılarak dizinin sonuna 1 ve 2 öğeleri eklenir. 
+//Son olarak, Find() fonksiyonu kullanılarak, 3'ten büyük ilk öğe bulunur ve bu öğe konsola yazdırılır.
+
+// Özetle, bu kod bir array sınıfı oluşturur ve bu sınıfta bir diziye öğe eklemek, 
+//öğeleri aramak gibi işlemler yapabilen bazı fonksiyonlar tanımlar.
+
 //=================================================================================
 
 const Arr = [1, 2, 3, 4, 5];
@@ -110,7 +132,7 @@ console.log(chars);
 
 //rest
 //rest
-//rest
+
 
 const [a,b,...log]=newArr;
 console.log(a,b,log);
@@ -122,13 +144,13 @@ foo("Lorem","Ipsum","Doler",...newArr)
 
 const Lorem = {
     name:"Lorem",
-    age: 32,
+    age: 2,
     City: "Baku"
 }
 
 const Ipsum = {
     name1:"Ipsum",
-    age1:28,
+    age1:8,
     City1:"Baku"
 }
 
